@@ -2,7 +2,6 @@
 
 Implementation of **Depth-from-Defocus (DfDD)** within a virtual *Habronattus pyrrithrix* jumping spider visual system, as described in *Dynamic focusing through retinal movements in Habronattus pyrrithrix jumping spiders*.
 
----
 
 ## Overview
 
