@@ -8,7 +8,7 @@ Implementation of **Depth-from-Defocus (DfDD)** within a virtual *Habronattus py
 
 This repository implements a modified version of the **FocalSplit DfDD algorithm** (https://arxiv.org/abs/2504.11202), adapted from a camera-based framework to simulate the optical properties of the jumping spider *Habronattus pyrrithrix*.
 
-Rather than operating on a conventional imaging system, this implementation emulates, the **focal properties of the spider’s principal eyes**, **Retinal tier structure (Tier I & Tier II)** and **viewing-angle-dependent optical effects**
+Rather than operating on a conventional imaging system, this implementation emulates, the **optical properties of the spider’s principal eyes**, **retinal tier structure (Tier I & Tier II)** and **viewing-angle-dependent optical effects**
 
 
 ### Given an input image and defined visual parameters, the system:
