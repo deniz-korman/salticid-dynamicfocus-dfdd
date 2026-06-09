@@ -25,4 +25,5 @@ Rather than operating on a conventional imaging system, this implementation emul
 The code can be adapted to meet different visual systems. The in-axis focusing distance of the lens can be defined through the `focusingDistance` variable. If the visual system exhibits field-based optical aberrations that are not corrected through morphological means, we recommend quantifying the changes in focus and describing them in the `normalized_field_curvature.csv` file.
 
 The `FocalSplit_forHpyrrithrix.py` script will produce direct plots of Mean Aggregate Depth Errors, depicting the errors associated with each viewing angle (and thus viewing distance). Additionally, csv outputs are generated in reports/MAE_outputs which can be interpreted and visualized using the provided `dfd_error_plotter.R` file.
+
 The script will produce direct plots of Mean Aggregate Depth Errors, depicting the errors associated with each viewing angle (and thus viewing distance). Additionally, csv outputs are generated in reports/MAE_outputs which can be interpreted and visualized using the provided `dfd_error_plotter.R` file.
