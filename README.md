@@ -2,8 +2,6 @@
 
 Implementation of **Depth-from-Defocus (DfDD)** within a virtual *Habronattus pyrrithrix* jumping spider visual system, as described in *Dynamic focusing through retinal movements in Habronattus pyrrithrix jumping spiders*.
 
----
-
 ## Overview
 
 This repository implements a modified version of the **FocalSplit DfDD algorithm** (https://arxiv.org/abs/2504.11202), adapted from a camera-based framework to simulate the optical properties of the jumping spider *Habronattus pyrrithrix*.
