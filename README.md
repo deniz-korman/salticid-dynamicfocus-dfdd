@@ -11,7 +11,7 @@ This repository implements a modified version of the **FocalSplit DfDD algorithm
 Rather than operating on a conventional imaging system, this implementation emulates, the **focal properties of the spider’s principal eyes**, **retinal tier structure (Tier I & Tier II)** and **viewing-angle-dependent optical effects**
 
 
-## Given an input image and defined visual parameters, `src/FocalSplit_forHpyrrithrix.py` will:
+### Given an input image and defined visual parameters, `src/FocalSplit_forHpyrrithrix.py` will:
 
 1. Simulate how a jumping spider views a scene across different **viewing angles**
 2. Determine **viewing distance** based on where gaze intersects the ground plane
