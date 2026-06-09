@@ -547,7 +547,7 @@ def getDfDDErrors_multiMethod(params, DFD_model='FocalSplit', fieldCurvature = T
             reader = csv.reader(infile)
             header = next(reader)
             # Contains angle-based focal length shrinkage ratio when deviating from on-axis viewing
-            loess_dict = {round(float(rows[0]),5):float(rows[1]) for rows in reader}
+            curvatureScaling_dict = {round(float(rows[0]),5):float(rows[1]) for rows in reader}
             model_str = model_str + 'wFieldCurvature'
 
 
@@ -579,7 +579,7 @@ def getDfDDErrors_multiMethod(params, DFD_model='FocalSplit', fieldCurvature = T
                 # Update optics of the system at each angle if accounting for field curvature
                 if fieldCurvature:
                     # The effective focal length of lens under current field curvature position.
-                    fieldCurvatureDistance = retinalDistance * loess_dict[round(angle,5)]
+                    fieldCurvatureDistance = retinalDistance * curvatureScaling_dict[round(angle,5)]
 
                     # Calculate & update optical power for Tier i of retina & optical power difference between two tiers.
                     rho = 1/fieldCurvatureDistance + 1/focusingDistance
