@@ -694,12 +694,12 @@ def getDfDDErrors_multiMethod(params, DFD_model='FocalSplit', fieldCurvature = T
 
             ground_deg = [90.0 - x for x in theta_deg]
 
-
-            with open(pkl_output.replace('pkl','csv'), 'w', newline='') as csvfile:
-                writer = csv.writer(csvfile)
-                # Write all rows at once
-                writer.writerows(rows_for_csv)
-            print(f"Successfully exported lists to {pkl_output}.csv.")
+            if export_MAEs:
+                with open(pkl_output.replace('pkl','csv'), 'w', newline='') as csvfile:
+                    writer = csv.writer(csvfile)
+                    # Write all rows at once
+                    writer.writerows(rows_for_csv)
+                print(f"Successfully exported lists to {pkl_output}.csv.")
 
 
             if plot_dist: # Plot with depth as x-axis
@@ -768,7 +768,7 @@ def getDfDDErrors_multiMethod(params, DFD_model='FocalSplit', fieldCurvature = T
                     prefix = f'{subfolder}/{prefix}'
                 if slice_at == 413:
                     prefix = prefix + f'_zoomed'
-                output_name = f'/reports/MAE_{initial_focusingDistance_str}/{prefix}.png'
+                output_name = f'../reports/MAE_{initial_focusingDistance_str}/{prefix}.png'
                 output_path = Path(output_name)
                 # Create the parent directories for the file
                 output_path.parent.mkdir(parents=True, exist_ok=True)
