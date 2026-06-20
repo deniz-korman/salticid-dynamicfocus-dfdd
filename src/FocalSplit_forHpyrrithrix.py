@@ -651,19 +651,17 @@ def getDfDDErrors_multiMethod(params, DFD_model='FocalSplit', fieldCurvature = T
 
     # Export MAEs for external plotting and analyses
     if export_MAEs:
-    ground_depths_for_csv_m = ['Ground_depth(m)']+[x for x in ground_distance_m]
-    ground_degs_for_csv_deg = ['Viewing_Angle(deg)']+[x for x in ground_deg]
-    errors100_for_csv_m = ['MAE(m)'] + list(np.nanmean(errors, axis=(0)))
+        ground_depths_for_csv_m = ['Ground_depth(m)']+[x for x in ground_distance_m]
+        ground_degs_for_csv_deg = ['Viewing_Angle(deg)']+[x for x in ground_deg]
+        errors100_for_csv_m = ['MAE(m)'] + list(np.nanmean(errors, axis=(0)))
 
-    rows_for_csv = zip(ground_degs_for_csv_deg,ground_depths_for_csv_m,errors100_for_csv_m)
+        rows_for_csv = zip(ground_degs_for_csv_deg,ground_depths_for_csv_m,errors100_for_csv_m)
 
-    with open(pkl_output.replace('pkl','csv'), 'w', newline='') as csvfile:
-        writer = csv.writer(f'reports/MAE_outputs/{csvfile}')
-        # Write all rows at once
-        writer.writerows(rows_for_csv)
-    print(f"Successfully exported errors to reports/MAE_outputs/{pkl_output}.csv.")
-
-
+        with open(pkl_output.replace('pkl','csv'), 'w', newline='') as csvfile:
+            writer = csv.writer(f'reports/MAE_outputs/{csvfile}')
+            # Write all rows at once
+            writer.writerows(rows_for_csv)
+        print(f"Successfully exported errors to reports/MAE_outputs/{pkl_output}.csv.")
     # Generate MAE plots
     if plot_indiv:
         # Plot at 3 different zoom levels
